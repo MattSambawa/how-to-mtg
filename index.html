@@ -2,9 +2,22 @@
     <html>
         <head>
             <title>How To Magic</title>
+
+            <!--LOAD CSS FILE-->
+            <link rel="stylesheet" href="./resources/css/index.css">
         </head>
 
         <body>
+            <!--LOAD REACT-->
+            <!--
+            <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        -->
+
+            <!--REACT COMPONENTS-->
+            <!--<script src="like_button.js"></script>-->
+
+
             <!-- NAVIGATION BAR-->
             <nav>
                 <a href="./index.html">Tutorial</a>
@@ -12,15 +25,15 @@
             </nav>
 
             <main>
-                <!--Jump to section on page-->
+                <!--JUMP TO SECTION ON PAGE-->
                 <section>
                 <h1>Magic: The Gathering</h1>
                 <nav>
                     <ol>
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#rules">Rules</a></li>
-                        <li><a href="#cardTypes">Types of Cards</a></li>
                         <li><a href="#cardAnatomy">How to Read A Card</a></li>
+                        <li><a href="#cardTypes">Types of Cards</a></li>
                     </ol>
                 </nav>
                 </section>
@@ -31,10 +44,10 @@
                 <div id="introduction">
                     <h2>Introduction to Magic the Gathering</h2>
                     <p>Explore lore rich worlds, discover unique strategies, and battle against your friends! 
-                        <em>Magic: The Gathering</em> is a physical trading card game that can be played with two or more players.
-                        <br /><br />
-                        With over 27,000 unique cards, there are infinite ways to play the game and many different formats to choose from.
-                        One of the most popular formats is called <strong>Standard</strong>.</p>
+                        <em>Magic: The Gathering</em> is a trading card game that can be played with two or more players.
+                        <br></br>
+                        With over 27,000 unique cards, there are infinite ways to play and various formats to choose from.
+                        One of the most popular formats is called <strong>Standard</strong>.
                         <p><em>Check out the <a href="./cardGallery.html">card gallery</a></em></p>
                     </p>
                 </div>
@@ -47,7 +60,7 @@
                         <ul>
                             <li>Each player begins the game with a life total of 20. The goal is to reduce your opponent's life total to 0.</li>
                             <li>Standard Magic decks contain sixty cards. Each deck consists of different types of cards such as
-                                creatures, sorceries, and <a href="#cardAnatomy:lands">lands</a>.</li>
+                                <a href="cardAnatomy:creatures">creatures</a>, sorceries, and <a href="#cardAnatomy:lands">lands</a>.</li>
                             <li>In order to cast spells, you need a resource called mana. Mana is produced by lands from your deck.</li>
                             <li>After casting creature spells, you place them on your side of the board to fight with your opponent!
                                 This part is known as the combat phase.</li>
@@ -59,16 +72,44 @@
                     <div id="rule:phases">
                         <h3>Turn Order & Phases</h3>
                         <p><em>A brief explaination of phases. Click on the image for print form.</em></p>
-                        <a href="mtg_turn_strucutre.jpg" target="_blank"><img src="mtg_turn_strucutre.jpg" alt="MTG turn strucutre"></a>
+                        <a href="mtg_turn_strucutre.jpg" target="_blank"><img src="mtg_turn_strucutre.jpg" alt="MTG turn strucutre" class="center"></a>
                     </div>
                 </div>
 
+                <br></br>
 
-
+                <!--CARD ANATOMY SECTION-->
                 <div id="cardAnatomy:lands">
-                    <h2>Lands</h2>
-                    <p>Lands are the primary mana source of your deck.</p>
+                    <h3>Lands</h3>
+                    <p>Lands are the primary mana source of your deck. You may play one land a turn on your main phase.</p>
                 </div>
+
+                <br></br>
+
+                <div id="cardAnatomy:creatures">
+                    <h3>Creatures</h3>
+                    <p>Creatures are the bread and butter of your deck. In order to push damage on your opponent, you need to construct a board of minions.</p>
+                    <img src="leonin-battlemage.png" width="375" height="525" alt="Leonin Battlemage" class="center">
+                </div>
+
+                <br></br>
+
+                <div id="cardAnatomy:instances&sorceries">
+                    <h3>Instances & Sorceries</h3>
+                    <p>Instances and sorceries are ways to interact with you and your opponent's board state. These interactions include things such as buff spells
+                        and damaging spells. 
+                        <br></br>
+                        Instances are unique in the way that they can be used in between phases during your opponent's turn.
+                    </p>
+                </div>
+
+                <!--
+                const domContainer = document.querySelector('#like_button_container');
+                const root = ReactDOM.createRoot(domContainer);
+                root.render(e(LikeButton));
+
+                <div id="like_button_container"></div>
+            -->
             </main>
         </body>
     </html>
