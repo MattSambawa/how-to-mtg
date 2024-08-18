@@ -1,6 +1,8 @@
 nav {
     color: aliceblue !important;
     font-size: 1.2em;
+    padding-top: 5px;
+    padding-left: 10px;
     width: 100%;
     font-family: Helvetica;
     text-align: left;
@@ -9,8 +11,8 @@ nav {
 /*BLUE HUE: #35577D, #141E30*/
 body {
     background: #141E30;
-    background: -webkit-linear-gradient(-45deg, #5d2850, #271939);
-    background: linear-gradient(-45deg, #5d2850, #271939);
+    background: -webkit-linear-gradient(-45deg, #672a57, #271939);
+    background: linear-gradient(-45deg, #672a57, #271939);
     margin: 0;
     padding: 0;
 }
@@ -73,4 +75,10 @@ ul {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.link {
+    color:aliceblue;
+    text-decoration: none; 
+    background-color: none;
 }

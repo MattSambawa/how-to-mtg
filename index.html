@@ -2,12 +2,12 @@
     <html>
         <head>
             <title>How To Magic</title>
-
-            <!--LOAD CSS FILE-->
-            <link rel="stylesheet" href="./resources/css/index.css">
         </head>
 
         <body>
+            <!--LOAD CSS FILE-->
+            <link rel="stylesheet" href="./resources/css/index.css">
+
             <!--LOAD REACT-->
             <!--
             <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -20,35 +20,34 @@
 
             <!-- NAVIGATION BAR-->
             <nav>
-                <a href="./index.html">Tutorial</a>
-                <a href="./cardGallery.html">Card Gallery</a>
+                <div>
+                    <a href="./index.html" class="link"><u>Tutorial</u></a>
+                    <a href="./cardGallery.html" class="link"><u>Card Gallery</u></a>
+                </div>
             </nav>
 
             <main>
                 <!--JUMP TO SECTION ON PAGE-->
                 <section>
                 <h1>Magic: The Gathering</h1>
-                <nav>
                     <ol>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#rules">Rules</a></li>
-                        <li><a href="#cardAnatomy">How to Read A Card</a></li>
-                        <li><a href="#cardTypes">Types of Cards</a></li>
+                        <li><a href="#introduction" class="link"><u>  Introduction</u></a></li>
+                        <li><a href="#rules" class="link"><u>  Rules</u></a></li>
+                        <li><a href="#cardAnatomy" class="link"><u>  How to Read a Card</u></a></li>
+                        <li><a href="#cardTypes" class="link"><u>  Types of Cards</u></a></li>
                     </ol>
-                </nav>
                 </section>
 
                 <br></br>
 
                 <!--INTRODUCTION SECTION-->
                 <div id="introduction">
-                    <h2>Introduction to Magic the Gathering</h2>
+                    <h2>Introduction to Magic: The Gathering</h2>
                     <p>Explore lore rich worlds, discover unique strategies, and battle against your friends! 
                         <em>Magic: The Gathering</em> is a trading card game that can be played with two or more players.
                         <br></br>
                         With over 27,000 unique cards, there are infinite ways to play and various formats to choose from.
                         One of the most popular formats is called <strong>Standard</strong>.
-                        <p><em>Check out the <a href="./cardGallery.html">card gallery</a></em></p>
                     </p>
                 </div>
 
@@ -59,34 +58,42 @@
                     <h2>Basic Rules</h2>
                         <ul>
                             <li>Each player begins the game with a life total of 20. The goal is to reduce your opponent's life total to 0.</li>
-                            <li>Standard Magic decks contain sixty cards. Each deck consists of different types of cards such as
-                                <a href="cardAnatomy:creatures">creatures</a>, sorceries, and <a href="#cardAnatomy:lands">lands</a>.</li>
+                            <li>Standard Magic decks contain sixty cards. Each deck is composed of varying card types such as 
+                                <a href="#cardTypes:lands" class="link"><u>lands</u></a>, <a href="#cardTypes:creatures" class="link"><u>creatures</u></a>, 
+                                and <a href="#cardTypes:instances" class="link"><u>instances</u></a>.</li>
                             <li>In order to cast spells, you need a resource called mana. Mana is produced by lands from your deck.</li>
                             <li>After casting creature spells, you place them on your side of the board to fight with your opponent!
                                 This part is known as the combat phase.</li>
-                            <li>When combat resolves, the board enters the final <a href="rule:phases">phases</a> and the turn is passed to your opponent.</li>
+                            <li>When combat resolves, the board enters the final <a href="#rule:phases" class="link"><u>phases</u></a> and the turn is passed to your opponent.</li>
                         </ul>
 
                     <br></br>
                     
                     <div id="rule:phases">
                         <h3>Turn Order & Phases</h3>
-                        <p><em>A brief explaination of phases. Click on the image for print form.</em></p>
-                        <a href="mtg_turn_strucutre.jpg" target="_blank"><img src="mtg_turn_strucutre.jpg" alt="MTG turn strucutre" class="center"></a>
+                        <p><em>Click on the image for print form</em></p>
+                        <a href="mtg_turn_strucutre.jpg" target="_blank"><img src="mtg_turn_strucutre.jpg" width="375" height="525" alt="MTG turn strucutre" class="center"></a>
                     </div>
                 </div>
 
                 <br></br>
 
                 <!--CARD ANATOMY SECTION-->
-                <div id="cardAnatomy:lands">
+                <div id="cardAnatomy">
+
+                </div>
+
+                <br></br>
+
+                <!--CARD TYPES SECTION-->
+                <div id="cardTypes:lands">
                     <h3>Lands</h3>
                     <p>Lands are the primary mana source of your deck. You may play one land a turn on your main phase.</p>
                 </div>
 
                 <br></br>
 
-                <div id="cardAnatomy:creatures">
+                <div id="cardTypes:creatures">
                     <h3>Creatures</h3>
                     <p>Creatures are the bread and butter of your deck. In order to push damage on your opponent, you need to construct a board of minions.</p>
                     <img src="leonin-battlemage.png" width="375" height="525" alt="Leonin Battlemage" class="center">
@@ -94,12 +101,11 @@
 
                 <br></br>
 
-                <div id="cardAnatomy:instances&sorceries">
+                <div id="cardTypes:instances">
                     <h3>Instances & Sorceries</h3>
-                    <p>Instances and sorceries are ways to interact with you and your opponent's board state. These interactions include things such as buff spells
-                        and damaging spells. 
+                    <p>Instances and sorceries are ways to directly interact with you and your opponent's board state. Like creatures, these cards cost mana to play.
                         <br></br>
-                        Instances are unique in the way that they can be used in between phases during your opponent's turn.
+                        Instances are unique in the way that they can be used in between phases and during your opponent's turn.
                     </p>
                 </div>
 
