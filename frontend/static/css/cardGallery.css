@@ -1,4 +1,7 @@
 body {
+    color: aliceblue !important;
+    background: #1e1e1e;
+
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
     font-family: 'Quicksand', sans-serif;
@@ -11,7 +14,8 @@ body {
     left: 0;
     width: var(--nav-width);
     height: 100vh;
-    background: #222222;
+    background: #1f1045;
+    background: -webkit-linear-gradient(-45deg, #672a57, #271939);
 }
 
 .nav__link {
