@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic: The Gathering Card Gallery</title>
+    <style>
+        html,
+        body {
+            background: #271939;
+            background: -webkit-linear-gradient(-45deg, #672a57, #271939);
+            background: linear-gradient(-45deg, #672a57, #271939);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            color: aliceblue !important;
+            font-size: 1.2em;
+            padding-top: 5px;
+            padding-left: 10px;
+            width: 100%;
+            font-family: Monaco;
+            text-align: left;
+        }
+
+        h1 {
+            color: aliceblue !important;
+            font-size: 2.2em;
+            width: 100%;
+            font-family: Monaco;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .card {
+            width: 200px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .controls {
+            margin: 20px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #449d47;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: #3f9243;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html" class="link"><u>Tutorial</u></a>
+    </nav>
+
+    <h1>Magic: The Gathering Card Gallery</h1>
+
+    <div class="controls">
+        <button onclick="sortCards()">Sort Alphabetically</button>
+
+        <button id="addCardButton">Add Card +</button>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        // Array of card data (add additional cards here)
+        const cards = [
+            { name: "Plains", img: "./resources/images/plains.png" },
+            { name: "Island", img: "./resources/images/island.png" },
+            { name: "Swamp", img: "./resources/images/swamp.png" },
+            { name: "Mountain", img: "./resources/images/mountain.png" },
+            { name: "Forest", img: "./resources/images/forest.png" },
+            { name: "Leonin Battlemage", img: "./resources/images/leonin-battlemage.png" },
+            { name: "Divination", img: "./resources/images/divination.png" },
+            { name: "Lightning Bolt", img: "./resources/images/lightning-bolt.png" }
+        ];
+
+        // Function to generate the gallery
+        function createGallery() {
+            const gallery = document.getElementById("gallery");
+            gallery.innerHTML = "";
+
+            cards.forEach(card => {
+                // Create card container
+                const cardElement = document.createElement("div");
+                cardElement.className = "card";
+
+                // Add image
+                const imgElement = document.createElement("img");
+                imgElement.src = card.img;
+                imgElement.alt = card.name;
+
+                // Add title
+                const titleElement = document.createElement("div");
+                titleElement.className = "card-title";
+                titleElement.textContent = card.name;
+
+                // Append elements to card container
+                cardElement.appendChild(imgElement);
+                cardElement.appendChild(titleElement);
+
+                gallery.appendChild(cardElement);
+            });
+        }
+
+        // Function to sort the cards alphabetically by name
+        function sortCards() {
+            cards.sort((a, b) => a.name.localeCompare(b.name));
+            createGallery();
+        }
+
+        createGallery();
+    </script>
+</body>
+
+</html>

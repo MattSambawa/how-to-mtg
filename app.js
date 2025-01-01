@@ -1,35 +1,22 @@
-// Select image element
-const img = document.getElementById('images');
+// List of rotating image URLs
+const imageUrls = [
+    "./resources/images/plains.png",
+    "./resources/images/island.png",
+    "./resources/images/swamp.png",
+    "./resources/images/mountain.png",
+    "./resources/images/forest.png"
+  ];
 
-//toggle variable
-let toggle = true;
-img.addEventListener('click', function() {
+  // Current image index
+  let currentIndex = 0;
 
-    toggle = !toggle;
-    if(toggle) {
-        img.src = './resources/images/island.png';
-    } else {
-        img.src = './resources/images/mountain.png';
-    }
-    
-    //TODO: FIX TOGGLE FUNCTION TO SHOW ALL IMAGES
-    /*toggle = toggle + 1;
+  function cycleImage() {
+    // Image element
+    const imgElement = document.getElementById('cycle-image');
 
-    if (toggle > 4) {
-        toggle = 0;
-    }
+    // Update the index to the next image, cycling back to 0 if at the end
+    currentIndex = (currentIndex + 1) % imageUrls.length;
 
-    if(toggle = 0) {
-        img.src = './resources/images/island.png';
-    } else if (toggle = 1) {
-        img.src = './resources/images/mountain.png';
-    } else if (toggle = 2) {
-        img.src = './resources/images/forest.png';
-    } else if (toggle = 3) {
-        img.src = './resources/images/swamp.png';
-    } else if (toggle = 4) {
-        img.src = './resources/images/plains.png';
-    }*/
-
-    console.log("event listener works!" + toggle);
-})
+    // Change the image to the next image
+    imgElement.src = imageUrls[currentIndex];
+  }

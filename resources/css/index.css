@@ -16,12 +16,15 @@ title {
 }
 
 /*BLUE HUE: #35577D, #141E30*/
-body {
+html, body {
     background: #271939;
     background: -webkit-linear-gradient(-45deg, #672a57, #271939);
     background: linear-gradient(-45deg, #672a57, #271939);
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -80,7 +83,7 @@ ul {
 
 .link {
     color:aliceblue;
-    text-decoration: none; 
+    text-decoration: none;
     background-color: none;
 }
 
@@ -92,13 +95,8 @@ ul {
 }
 
 .image-container {
-    width: 337px;
-    height: 475px;
-}
-
-.image-container img{
-    width: 100%;
-    height: 100%;
+    width: 285px;
+    height: 425px;
 }
 
 .row {
@@ -110,4 +108,4 @@ ul {
 .column {
     flex: 50%;
     padding: 10px;
-  }
+}

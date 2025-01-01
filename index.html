@@ -1,133 +1,174 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <title>How To Magic</title>
-        </head>
+<html lang="en">
 
-        <body>
-            <!--LOAD CSS FILE-->
-            <link rel="stylesheet" href="./resources/css/index.css">
+<head>
+    <title>How To Magic</title>
+</head>
 
-            <!--LOAD REACT-->
-            <!--
+<body>
+    <!--LOAD CSS FILE-->
+    <link rel="stylesheet" href="./resources/css/index.css">
+
+    <!--LOAD REACT-->
+    <!--
             <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
             <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
             -->
 
-            <!--REACT COMPONENTS-->
-            <!--<script src="like_button.js"></script>-->
+    <!-- NAVIGATION BAR-->
+    <nav>
+        <div>
+            <!--<a href="./index.html" class="link"><u>Tutorial</u></a>-->
+            <a href="./cardGallery.html" class="link"><u>Card Gallery</u></a>
 
+            <!--<a href="./SPAlink.html" target="_blank" class="link"><u>Card Gallery(SPA)</u></a>-->
+        </div>
+    </nav>
 
-            <!-- NAVIGATION BAR-->
-            <nav>
-                <div>
-                    <a href="./index.html" class="link"><u>Tutorial</u></a>
-                    <a href="./SPAlink.html" target="_blank" class="link"><u>Card Gallery(SPA)</u></a>
-                </div>
-            </nav>
+    <main>
+        <!--JUMP TO SECTION ON PAGE-->
+        <section>
+            <h1>Magic: The Gathering</h1>
+            <ol>
+                <li><a href="#introduction" class="link"><u> Introduction</u></a></li>
+                <li><a href="#rules" class="link"><u> Rules</u></a></li>
+                <li><a href="#cardTypes:lands" class="link"><u> Types of Cards</u></a></li>
+                <li><a href="#cardAnatomy" class="link"><u> How to Read a Card</u></a></li>
+            </ol>
+        </section>
 
-            <main>
-                <!--JUMP TO SECTION ON PAGE-->
-                <section>
-                <h1>Magic: The Gathering</h1>
-                    <ol>
-                        <li><a href="#introduction" class="link"><u>  Introduction</u></a></li>
-                        <li><a href="#rules" class="link"><u>  Rules</u></a></li>
-                        <!--<li><a href="#cardAnatomy" class="link"><u>  How to Read a Card</u></a></li>-->
-                        <li><a href="#cardTypes:lands" class="link"><u>  Types of Cards</u></a></li>
-                    </ol>
-                </section>
+        <br>
 
-                <br></br>
+        <!--INTRODUCTION SECTION-->
+        <div id="introduction">
+            <h2>Introduction to Magic: The Gathering</h2>
+            <p>Explore lore rich worlds, discover unique strategies, and battle against your friends!
+                <em>Magic: The Gathering</em> is a trading card game that can be played with two or more players.
+                <br>
+                With over 27,000 unique cards, there are infinite ways to play and various formats to choose from.
+                One of the most popular formats is called <strong>Standard</strong>.
+            </p>
+        </div>
 
-                <!--INTRODUCTION SECTION-->
-                <div id="introduction">
-                    <h2>Introduction to Magic: The Gathering</h2>
-                    <p>Explore lore rich worlds, discover unique strategies, and battle against your friends! 
-                        <em>Magic: The Gathering</em> is a trading card game that can be played with two or more players.
-                        <br></br>
-                        With over 27,000 unique cards, there are infinite ways to play and various formats to choose from.
-                        One of the most popular formats is called <strong>Standard</strong>.
-                    </p>
-                </div>
+        <br>
 
-                <br></br>
+        <!--BASIC RULES-->
+        <div id="rules">
+            <h2>Basic Rules</h2>
+            <ul>
+                <li>Each player begins the game with a life total of 20. The goal is to reduce your opponent's life
+                    total to 0.</li>
+                <li>Standard Magic decks contain sixty cards. Each deck is composed of varying card types such as
+                    <a href="#cardTypes:lands" class="link"><u>lands</u></a>, <a href="#cardTypes:creatures"
+                        class="link"><u>creatures</u></a>,
+                    and <a href="#cardTypes:instances" class="link"><u>instances</u></a>.
+                </li>
+                <li>In order to cast spells, you need a resource called mana. Mana is produced by lands from your deck.
+                </li>
+                <li>After casting creature spells, you place them on your side of the board to fight with your opponent!
+                    This part is known as the combat phase.</li>
+                <li>When combat resolves, the board enters the final <a href="#rule:phases"
+                        class="link"><u>phases</u></a>, all creatures
+                    return to full health and the turn is passed to your opponent.</li>
+            </ul>
 
-                <!--BASIC RULES-->
-                <div id="rules">
-                    <h2>Basic Rules</h2>
-                        <ul>
-                            <li>Each player begins the game with a life total of 20. The goal is to reduce your opponent's life total to 0.</li>
-                            <li>Standard Magic decks contain sixty cards. Each deck is composed of varying card types such as 
-                                <a href="#cardTypes:lands" class="link"><u>lands</u></a>, <a href="#cardTypes:creatures" class="link"><u>creatures</u></a>, 
-                                and <a href="#cardTypes:instances" class="link"><u>instances</u></a>.</li>
-                            <li>In order to cast spells, you need a resource called mana. Mana is produced by lands from your deck.</li>
-                            <li>After casting creature spells, you place them on your side of the board to fight with your opponent!
-                                This part is known as the combat phase.</li>
-                            <li>When combat resolves, the board enters the final <a href="#rule:phases" class="link"><u>phases</u></a> and the turn is passed to your opponent.</li>
-                        </ul>
+            <br>
 
-                    <br></br>
-                    
-                    <div id="rule:phases">
-                        <h3>Turn Order & Phases</h3>
-                        <p><em>Click on the image for print form</em></p>
-                        <a href="./resources/images/mtg_turn_strucutre.jpg" target="_blank"><img src="./resources/images/mtg_turn_strucutre.jpg"
-                             alt="MTG turn strucutre" class="center image-container"></a>
-                    </div>
-                </div>
+            <div id="rule:phases">
+                <h3>Turn Order and Phases</h3>
+                <p><em>Click on the image for print form</em></p>
+                <a href="./resources/images/mtg_turn_strucutre.jpg" target="_blank"><img
+                        src="./resources/images/mtg_turn_strucutre.jpg" alt="MTG turn strucutre"
+                        class="center image-container"></a>
+            </div>
+        </div>
 
-                <br></br>
+        <br>
 
-                <!--CARD ANATOMY SECTION-->
-                <div id="cardAnatomy">
-                    <!--TODO: ADD CARD ANATOMY-->
-                </div>
+        <br>
 
-                <br></br>
+        <!--CARD TYPES SECTION-->
+        <div id="cardTypes:lands">
+            <h3>Lands</h3>
+            <p>Lands are the primary mana source of a deck. You may play one land a turn on your main phases.</p>
+            <p><em>Click on the image</em></p>
 
-                <!--CARD TYPES SECTION-->
-                <div id="cardTypes:lands">
-                    <h3>Lands</h3>
-                    <p>Lands are the primary mana source of your deck. You may play one land a turn on your main phase.</p>
-                    <p><em>Click on the image</em></p>
-                    <div class="center image-container">
-                        <img src="./resources/images/island.png" alt="island" id="images">
-                    </div>
+            <script src="app.js"></script>
 
-                    <script src="app.js"></script>
-                </div>
+            <div class="center image-container">
+                <img id="cycle-image" src="./resources/images/plains.png" alt="Cycling Image" onclick="cycleImage()">
+            </div>
 
-                <br></br>
+            <p>These are all various kinds of lands that have the same function as its respective color.</p>
 
-                <div id="cardTypes:creatures">
-                    <h3>Creatures</h3>
-                    <p>Creatures are the bread and butter of your deck. In order to push damage on your opponent, you need to construct a board of minions.</p>
-                    <img src="./resources/images/leonin-battlemage.png" alt="Leonin Battlemage" class="center image-container">
-                </div>
+            <br>
 
-                <br></br>
+            <p>To obtain mana to cast spells, the player must indicate they are using a land by tapping the card.</p>
+            <div class="center image-container">
+                <script>
+                    let rotationState = 0;
 
-                <div id="cardTypes:instances">
-                    <h3>Instances & Sorceries</h3>
-                    <p>Instances and sorceries are ways to directly interact with you and your opponent's board state. Like creatures, these cards cost mana to play.
-                        <br></br>
-                        Instances are unique in the way that they can be used in between phases and during your opponent's turn.
-                    </p>
+                    function rotateImage() {
+                        const imgElement = document.getElementById('rotating-image');
 
-                    <div class="row center">
-                        <img src="./resources/images/lightning-bolt.png" alt="Lightning Bolt" class="image-container column">
-                        <img src="./resources/images/divination.png" alt="Divination" class="image-container column">
-                    </div>
-                </div>
+                        // Rotation toggle
+                        rotationState = rotationState === 0 ? 90 : 0;
 
-                <!--
-                const domContainer = document.querySelector('#like_button_container');
-                const root = ReactDOM.createRoot(domContainer);
-                root.render(e(LikeButton));
+                        imgElement.style.transform = `rotate(${rotationState}deg)`;
+                    }
+                </script>
 
-                <div id="like_button_container"></div>
-                -->
-            </main>
-        </body>
-    </html>
+                <img id="rotating-image" src="./resources/images/plains.png" onclick="rotateImage()">
+            </div>
+            <p>The player indicates they are tapping a card by turning it 90 degrees to the side.</p>
+        </div>
+
+        <br>
+
+        <div id="cardTypes:creatures">
+            <h3>Creatures</h3>
+            <p>Creatures are the bread and butter of a deck. In order to deal damage to an opponent, you need to
+                construct a board of minions.</p>
+            <a href="./resources/images/leonin-battlemage.png" target="_blank"><img
+                    src="./resources/images/leonin-battlemage.png" alt="Leonin Battlemage"
+                    class="center image-container"></a>
+        </div>
+
+        <br>
+
+        <div id="cardTypes:instances">
+            <h3>Instances and Sorceries</h3>
+            <p>Instances and sorceries are ways to directly interact with you and your opponent's board state. Like
+                creatures, these cards cost mana to play.
+                <br>
+                Instances are unique in the way that they can be used in between phases and during your opponent's turn.
+            </p>
+
+            <div class="row center">
+                <img src="./resources/images/lightning-bolt.png" alt="Lightning Bolt" class="image-container column">
+                <img src="./resources/images/divination.png" alt="Divination" class="image-container column">
+            </div>
+        </div>
+
+        <br>
+
+        <!--CARD ANATOMY SECTION-->
+        <div id="cardAnatomy">
+            <h3>Card Anatomy</h3>
+            <!--TODO: ADD CARD ANATOMY-->
+            <center>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure dolor </p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                    Excepteur sint occaecat cupidatat</p>
+            </center>
+        </div>
+    </main>
+</body>
+
+</html>
